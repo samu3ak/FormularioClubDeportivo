@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/formulario1.css">
+</head>
+
+<body>
+    <header>
+        <img src="../images/basketball.png" alt="Basketball">
+        <p>Club Deportivo Baloncesto</p>
+    </header>
+
+    <div class="leyenda">
+        <p><span>*</span> : Campo Obligatorio</p>
+        <p>Edad mínima: 14 años</p>
+    </div>
+    <form>
+        <div class="grid">
+            <div class="labels">
+                <label for="nombre">Nombre <span>*</span></label>
+                <label for="apellidos">Apellidos <span>*</span></label>
+                <label for="fechaNmto">Fecha de nacimiento <span>*</span></label>
+                <label for="telefono">Teléfono/Tlf Tutor Legal <span>*</span></label>
+                <label for="correo">Correo electrónico</label>
+                <label for="direccion">Dirección</label>
+                <label for="cp">Código Postal <span>*</span></label>
+                <label for="medico">Problema médico que debamos saber <span>*</span></label>
+            </div>
+            <div class="inputs">
+                <input type="text" name="nombre" placeholder="Tu nombre">
+                <input type="text" name="apellidos" placeholder="Tus apellidos">
+                <input type="text" name="fechaNmto" placeholder="DD-MM-AAAA">
+                <input type="text" name="telefono" placeholder="Teléfono">
+                <input type="text" name="correo" placeholder="example@domain.com">
+                <input type="text" name="direccion" placeholder="Calle Ejemplo Nº43">
+                <input type="text" name="cp" placeholder="12345">
+                <div class="radio">
+                    <input type="radio" name="medico" value="si">
+                    <label for="si">Si</label>
+                    <input type="radio" name="medico" value="no">
+                    <label for="no">No</label>
+                </div>
+            </div>
+            <label for="observaciones">Observaciones médicas a tener en cuenta <span>*</span></label>
+            <textarea name="observaciones" rows="8" cols="50"></textarea>
+            <button>Siguiente</button>
+    </form>
+
+    <footer>
+        <div class="grid">
+            <p>+34 601 432 718</p>
+            <p>cdbc@gmail.com</p>
+            <img src="../images/twitterIcon.png" alt="Twitter Icon">
+            <img src="../images/instagramIcon.png" alt="Instagram Icon">
+            <img src="../images/facebookIcon.png" alt="Facebook Icon">
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+article {
+    background-color: rgb(0, 0, 0, 0.6);
+    height: 500px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+    font-family: Agency FB;
+    overflow-y: scroll;
+}
+
+article p {
+    padding: 30px;
+    color: white;
+    font-size: 42px;
+}
+
+button {
+    font-family: Agency FB;
+    font-size: 38px;
+    color: #ff8300;
+    background-color: #004060;
+    border: none;
+    padding: 15px;
+    width: 350px;
+    margin-top: 40px;
+    margin-left: 800px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff8300;
+    color: #004060;
+}
+
+/* Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
