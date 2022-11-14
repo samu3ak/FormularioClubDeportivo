@@ -97,6 +97,12 @@ button:hover {
     color: #004060;
 }
 
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: default;
+}
+
 /* Scroll Bar */
 /* width */
 ::-webkit-scrollbar {

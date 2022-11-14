@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/formulario1.css">
+    <link rel="shortcut icon" href="../images/basketball.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -20,11 +22,13 @@
         <p><span>*</span> : Campo Obligatorio</p>
         <p>Edad mínima: 14 años</p>
     </div>
+
     <form>
         <div class="grid">
             <div class="labels">
                 <label for="nombre">Nombre <span>*</span></label>
                 <label for="apellidos">Apellidos <span>*</span></label>
+                <label for="DNI">DNI <span>*</span></label>
                 <label for="fechaNmto">Fecha de nacimiento <span>*</span></label>
                 <label for="telefono">Teléfono/Tlf Tutor Legal <span>*</span></label>
                 <label for="correo">Correo electrónico</label>
@@ -35,6 +39,7 @@
             <div class="inputs">
                 <input type="text" name="nombre" placeholder="Tu nombre">
                 <input type="text" name="apellidos" placeholder="Tus apellidos">
+                <input type="text" name="dni" placeholder="12344556A">
                 <input type="text" name="fechaNmto" placeholder="DD-MM-AAAA">
                 <input type="text" name="telefono" placeholder="Teléfono">
                 <input type="text" name="correo" placeholder="example@domain.com">
@@ -49,7 +54,8 @@
             </div>
             <label for="observaciones">Observaciones médicas a tener en cuenta <span>*</span></label>
             <textarea name="observaciones" rows="8" cols="50"></textarea>
-            <button>Siguiente</button>
+            <button disabled>Siguiente</button>
+        </div>
     </form>
 
     <footer>
@@ -62,6 +68,7 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="../js/validacion.js"></script>
 </body>
 
 </html>
