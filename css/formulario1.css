@@ -73,10 +73,25 @@ form .inputs input {
 
 form label[for=observaciones] {
     margin-top: 30px;
+    display: none;
 }
 
 form textarea {
     margin-top: 20px;
+    display: none;
+}
+
+.dniInput input[name=dni] {
+    width: 80px;
+}
+
+.dniInput input[name=dniLetter] {
+    width: 20px;
+}
+
+.dniInput input[name=dniLetter]:disabled {
+    background-color: white;
+    color: black;
 }
 
 button {
@@ -90,11 +105,13 @@ button {
     cursor: pointer;
     margin-top: 50px;
     margin-left: 140px;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 button:hover {
     background-color: #ff8300;
     color: #004060;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 button:disabled {
