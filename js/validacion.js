@@ -41,10 +41,11 @@ $(document).ready(function () {
         return $(fullName).val().match(regex);
     }
 
+    var edad = 0;
     function checkDate(name, age) {
         if ($(name).val() != "") {
             let fechaInput = $(name).val().replaceAll("-", "");
-            let edad = (fechaActual - fechaInput) / 10000;
+            edad = (fechaActual - fechaInput) / 10000;
             return edad >= age && edad <= 160;
         } else {
             return false;
@@ -79,6 +80,14 @@ $(document).ready(function () {
             $("input[name=dniLetter]").val(dniLetter);
         } else {
             $("input[name=dniLetter]").val("");
+        }
+    });
+
+    // Autofills the age field based on the date input field
+    $("input[type=date]").on("input", function () {
+        checkDate("input[type=date]", 14);
+        if (edad >= 0 && edad <= 160) {
+            $("input[name=age]").val(Math.trunc(edad) + " años");
         }
     });
 

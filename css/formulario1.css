@@ -94,6 +94,19 @@ form textarea {
     color: black;
 }
 
+.dateInput input[name=fechaNmto] {
+    width: 150px;
+}
+
+.dateInput input[name=age] {
+    width: 60px;
+}
+
+.dateInput input[name=age]:disabled {
+    background-color: white;
+    color: black;
+}
+
 button {
     font-family: Agency FB;
     font-size: 38px;

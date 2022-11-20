@@ -43,7 +43,10 @@
                     <input type="text" name="dni" placeholder="12345678" maxlength="8">
                     <input type="text" name="dniLetter" disabled>
                 </div>
-                <input type="date" name="fechaNmto" placeholder="DD-MM-AAAA">
+                <div class="dateInput">
+                    <input type="date" name="fechaNmto" placeholder="DD-MM-AAAA">
+                    <input type="text" name="age" disabled>
+                </div>
                 <input type="text" name="telefono" placeholder="634634634" maxlength="9">
                 <input type="text" name="correo" placeholder="example@domain.com">
                 <input type="text" name="direccion" placeholder="Calle Ejemplo Nº43">
@@ -56,7 +59,7 @@
                 </div>
             </div>
             <label for="observaciones">Observaciones médicas a tener en cuenta</label>
-            <textarea name="observaciones" rows="8" cols="50"></textarea>
+            <textarea name="observaciones" rows="8" cols="50" placeholder="Cuéntanos algo que debamos tener en cuenta"></textarea>
             <button disabled>Siguiente</button>
         </div>
     </form>
