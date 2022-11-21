@@ -5,9 +5,9 @@ $(document).ready(function () {
         constructor() {
             this.nombre = $("input[name=nombre]").val().trim();
             this.apellidos = $("input[name=apellidos]").val().trim();
-            this.dni = $("input[name=dni]").val().trim();
-            this.fechaNacimiento = $("input[name=date]").val();
-            this.edad = edad;
+            this.dni = $("input[name=dni]").val().trim() + dniLetter;
+            this.fechaNacimiento = $("input[type=date]").val();
+            this.edad = Math.trunc(edad);
             this.telefono = $("input[name=telefono]").val().trim();
             this.correo = $("input[name=correo]").val().trim();
             this.codigoPostal = $("input[name=cp]").val().trim();
@@ -98,11 +98,12 @@ $(document).ready(function () {
     });
 
     // Autofills the DNI Letter Field
+    var dniLetter = "A";
     $("input[name=dni]").on("input", function () {
         if ($("input[name=dni]").val().length == 8) {
             let dniVal = parseInt($("input[name=dni]").val());
             dniVal %= 23;
-            let dniLetter = dniLetters[dniVal];
+            dniLetter = dniLetters[dniVal];
             $("input[name=dniLetter]").val(dniLetter);
         } else {
             $("input[name=dniLetter]").val("");

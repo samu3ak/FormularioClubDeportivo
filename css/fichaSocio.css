@@ -1,0 +1,60 @@
+.content {
+    background: rgb(0, 0, 0, 0.6);
+    margin: 0 auto;
+    height: 550px;
+    width: 1600px;
+    margin-top: 80px;
+    padding: 30px;
+}
+
+.fichaSocio {
+    background: #004060;
+    height: 520px;
+    width: 1600px;
+}
+
+.info {
+    font-family: Agency FB;
+    color: #ff8300;
+    background-color: black;
+    width: 30%;
+}
+
+.info p {
+    margin: 0;
+}
+
+.info .title {
+    font-size: 85px;
+    padding-top: 25px;
+}
+
+.club {
+    font-size: 30px;
+    padding-top: 25px;
+    padding-left: 20px;
+}
+
+.info img {
+    float: left;
+    height: 150px;
+    width: 150px;
+    padding-left: 20px;
+}
+
+.info .ficha {
+    font-size: 88px;
+    padding-top: 200px;
+    padding-left: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2000px 500px;
+}
+
+.socio {
+    background-color: red;
+    height: 500px;
+    width: 40%;
+}

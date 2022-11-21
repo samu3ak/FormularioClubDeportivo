@@ -1,8 +1,19 @@
 $(document).ready(function () {
-    // MemberBasket Class
+    // MemberBasket Class (Final Member Class)
 
+    var member = JSON.parse(localStorage.getItem("socio"));
     class MemberBasket {
         constructor() {
+            // Personal Info
+            this.nombre = member.nombre;
+            this.apellidos = member.apellidos;
+            this.dni = member.dni;
+            this.fechaNacimiento = member.fechaNacimiento;
+            this.edad = member.edad;
+            this.telefono = member.telefono;
+            this.correo = member.correo;
+            this.codigoPostal = member.codigoPostal;
+            // Basketball-related Stuff
             this.posicion = $("select[name=posicion]").val();
             this.experiencia = $("input[name=anhos]").val();
             this.anterioridad = $("input[name=anterioridad]:checked").val();
@@ -55,6 +66,14 @@ $(document).ready(function () {
 
     $(function () {
         checkForm("form");
+    });
+
+    // LocalStorage Management onclick Button
+    $("button").click(function (e) {
+        e.preventDefault();
+        var socio = new MemberBasket();
+        localStorage.setItem("member", JSON.stringify(socio));
+        location.href = "./fichaSocio.html";
     });
 
 });
