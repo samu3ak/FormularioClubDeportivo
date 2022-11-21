@@ -1,4 +1,23 @@
 $(document).ready(function () {
+    // Member Class
+
+    class Member {
+        constructor() {
+            this.nombre = $("input[name=nombre]").val().trim();
+            this.apellidos = $("input[name=apellidos]").val().trim();
+            this.dni = $("input[name=dni]").val().trim();
+            this.fechaNacimiento = $("input[name=date]").val();
+            this.edad = edad;
+            this.telefono = $("input[name=telefono]").val().trim();
+            this.correo = $("input[name=correo]").val().trim();
+            this.codigoPostal = $("input[name=cp]").val().trim();
+        }
+    }
+
+
+
+
+
     // Regex patterns
     var nameRegex = /[A-z]{2}[A-z\s]{0,30}/;
     var dniRegex = "^[0-9]{8}$";
@@ -38,7 +57,15 @@ $(document).ready(function () {
     // Check input functions
     function checkInput(name, regex) {
         let fullName = `input[name=${name}]`;
-        return $(fullName).val().match(regex);
+        let matches = $(fullName).val().match(regex);
+        if (!matches) {
+            matches = false;
+            $(fullName).css("border", "1px solid red");
+        } else {
+            $(fullName).css("border", "none");
+            matches = true;
+        }
+        return matches;
     }
 
     var edad = 0;
@@ -55,11 +82,10 @@ $(document).ready(function () {
     // Check Form
     function checkForm(name) {
         $(name + " *").on("input", function () {
-            if (checkInput("nombre", nameRegex) && checkInput("apellidos", nameRegex) &&
-                checkInput("dni", dniRegex) && checkDate("input[type=date]", 14) &&
-                checkInput("telefono", telRegex) && checkInput("correo", emailRegex) &&
-                checkInput("direccion", nameRegex) && checkInput("cp", postalRegex) &&
-                document.querySelector("input[type=radio]:checked").checked) {
+            if (checkInput("nombre", nameRegex) & checkInput("apellidos", nameRegex) &
+                checkInput("dni", dniRegex) & checkDate("input[type=date]", 14) &
+                checkInput("telefono", telRegex) & checkInput("correo", emailRegex)
+                & checkInput("cp", postalRegex)) {
                 $("button").removeAttr("disabled");
             } else {
                 $("button").attr("disabled", "disabled");
@@ -88,6 +114,11 @@ $(document).ready(function () {
         checkDate("input[type=date]", 14);
         if (edad >= 0 && edad <= 160) {
             $("input[name=age]").val(Math.trunc(edad) + " años");
+            if (edad < 14) {
+                $("input[name=age]").css("border", "1px solid red");
+            } else {
+                $("input[name=age]").css("border", "none");
+            }
         }
     });
 
@@ -100,6 +131,14 @@ $(document).ready(function () {
             $("label[for=observaciones]").css("display", "none");
             $("textarea").css("display", "none");
         }
+    });
+
+    // LocalStorage Management onclick Button
+    $("button").click(function (e) {
+        e.preventDefault();
+        var socio = new Member();
+        localStorage.setItem("socio", JSON.stringify(socio));
+        location.href = "./formulario2.html";
     });
 
 });

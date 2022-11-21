@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDBC - Formulario P2</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/formulario2.css">
+    <link rel="shortcut icon" href="../images/basketball.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="../images/basketball.png" alt="Basketball">
+        <p>Club Deportivo Baloncesto</p>
+    </header>
+
+    <div class="leyenda">
+        <p><span>*</span> : Campo Obligatorio</p>
+    </div>
+
+    <form>
+        <div class="grid">
+            <div class="labels">
+                <label for="posicion">Posición preferente</label>
+                <label for="anhos">Años de experiencia<span>*</span></label>
+                <label for="anterioridad">Primera vez en un club</label>
+                <label for="suscripcion">Suscripción a elegir</label>
+                <label for="descuento">Descuento estudiante (15%)</label>
+                <label for="horario">Preferencia de horario</label>
+            </div>
+            <div class="inputs">
+                <div class="select">
+                    <select name="posicion">
+                        <option value="base">Base</option>
+                        <option value="escolta">Escolta</option>
+                        <option value="alero">Alero</option>
+                        <option value="alapivot">Ala-Pivot</option>
+                        <option value="pivot">Pivot</option>
+                    </select>
+                </div>
+                <input type="number" name="anhos" placeholder="0-80">
+                <div class="radio">
+                    <input type="radio" name="anterioridad" value="si">
+                    <label for="si">Si</label>
+                    <input type="radio" name="anterioridad" value="no" checked>
+                    <label for="no">No</label>
+                </div>
+                <div class="select suscripcion">
+                    <select name="suscripcion">
+                        <option value="base">Base</option>
+                        <option value="escolta">Escolta</option>
+                        <option value="alero">Alero</option>
+                        <option value="alapivot">Ala-Pivot</option>
+                        <option value="pivot">Pivot</option>
+                    </select>
+                </div>
+                <div class="radio">
+                    <input type="radio" name="descuento" value="si">
+                    <label for="si">Si</label>
+                    <input type="radio" name="descuento" value="no" checked>
+                    <label for="no">No</label>
+                </div>
+                <div class="select horario">
+                    <select name="horario">
+                        <option value="mañana">Mañana</option>
+                        <option value="tarde">Tarde</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <label for="observaciones">Observaciones</label>
+        <textarea name="observaciones" rows="8" cols="50"
+            placeholder="Cuéntanos algo que debamos tener en cuenta"></textarea>
+        <button disabled>Siguiente</button>
+        </div>
+    </form>
+
+    <footer>
+        <div class="grid">
+            <p>+34 601 432 718</p>
+            <p>cdbc@gmail.com</p>
+            <img src="../images/twitterIcon.png" alt="Twitter Icon">
+            <img src="../images/instagramIcon.png" alt="Instagram Icon">
+            <img src="../images/facebookIcon.png" alt="Facebook Icon">
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../js/validacion2.js"></script>
+</body>
+
+</html>
