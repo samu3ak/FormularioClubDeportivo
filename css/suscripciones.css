@@ -1,0 +1,31 @@
+.content {
+    background: #004060;
+    margin: 0 auto;
+    height: 550px;
+    width: 1600px;
+    margin-top: 80px;
+    padding: 30px;
+    font-family: Agency FB;
+}
+
+.content h1 {
+    margin: 0;
+    color: #ff8300;
+    font-weight: bold;
+    text-align: center;
+    font-size: 48px;
+}
+
+.content ul li {
+    color: white;
+    font-size: 38px;
+    padding: 30px;
+}
+
+.conent p {
+    color: white;
+}
+
+.content span {
+    font-size: 45px;
+}

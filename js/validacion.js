@@ -1,4 +1,17 @@
 $(document).ready(function () {
+    // Theme Change Logic
+
+    if (localStorage.getItem("theme") != null) {
+        var theme = localStorage.getItem("theme");
+        if (theme != "darkTheme") {
+            $("head #styles").attr("href", "../css/styles.css");
+            $("head #page").attr("href", "../css/formulario1.css");
+        } else {
+            $("head #styles").attr("href", "../css/styles_dark.css");
+            $("head #page").attr("href", "../css/formulario1_dark.css");
+        }
+    }
+
     // Member Class
 
     class Member {
@@ -60,7 +73,7 @@ $(document).ready(function () {
         let matches = $(fullName).val().match(regex);
         if (!matches) {
             matches = false;
-            $(fullName).css("border", "1px solid red");
+            $(fullName).css("border", "2px solid red");
         } else {
             $(fullName).css("border", "none");
             matches = true;
@@ -125,7 +138,7 @@ $(document).ready(function () {
 
     // Displays the medical observations textarea's box
     $("input[type=radio]").on("input", function () {
-        if ($("input[type=radio]:checked").val() == "si") {
+        if ($("input[type=radio]:checked").val() == "Si") {
             $("label[for=observaciones]").css("display", "inline");
             $("textarea").css("display", "inline");
         } else {

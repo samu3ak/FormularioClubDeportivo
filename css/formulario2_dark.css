@@ -63,8 +63,8 @@ form .inputs input,
 button {
     font-family: Agency FB;
     font-size: 38px;
-    color: #ff8300;
-    background-color: #004060;
+    color: white;
+    background-color: #111111;
     border: none;
     padding: 15px;
     width: 350px;
@@ -75,8 +75,8 @@ button {
 }
 
 button:hover {
-    background-color: #ff8300;
-    color: #004060;
+    background-color: white;
+    color: #111111;
     transition: color 0.3s, background-color 0.3s;
 }
 

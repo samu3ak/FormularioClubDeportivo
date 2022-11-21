@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CDBC - Formulario P2</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/formulario2.css">
+    <link id="styles" rel="stylesheet" href="../css/styles.css">
+    <link id="page" rel="stylesheet" href="../css/formulario2.css">
     <link rel="shortcut icon" href="../images/basketball.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
@@ -29,45 +29,45 @@
                 <label for="anhos">Años de experiencia<span>*</span></label>
                 <label for="anterioridad">Primera vez en un club</label>
                 <label for="suscripcion">Suscripción a elegir</label>
-                <label for="descuento">Descuento estudiante (15%)</label>
+                <label for="descuento">Descuento estudiante (-30% Cuota)</label>
                 <label for="horario">Preferencia de horario</label>
             </div>
             <div class="inputs">
                 <div class="select">
                     <select name="posicion">
-                        <option value="base">Base</option>
-                        <option value="escolta">Escolta</option>
-                        <option value="alero">Alero</option>
-                        <option value="alapivot">Ala-Pivot</option>
-                        <option value="pivot">Pivot</option>
+                        <option value="Base">Base</option>
+                        <option value="Escolta">Escolta</option>
+                        <option value="Alero">Alero</option>
+                        <option value="Alapivot">Ala-Pivot</option>
+                        <option value="Pivot">Pivot</option>
                     </select>
                 </div>
                 <input type="number" name="anhos" placeholder="0-80">
                 <div class="radio">
-                    <input type="radio" name="anterioridad" value="si">
+                    <input type="radio" name="anterioridad" value="Si">
                     <label for="si">Si</label>
-                    <input type="radio" name="anterioridad" value="no" checked>
+                    <input type="radio" name="anterioridad" value="No" checked>
                     <label for="no">No</label>
                 </div>
                 <div class="select suscripcion">
                     <select name="suscripcion">
-                        <option value="base">Base</option>
-                        <option value="escolta">Escolta</option>
-                        <option value="alero">Alero</option>
-                        <option value="alapivot">Ala-Pivot</option>
-                        <option value="pivot">Pivot</option>
+                        <option value="Basica (15€)">Básica (15€)</option>
+                        <option value="Media (30€)">Media (30€)</option>
+                        <option value="Avanzada (40€)">Avanzada (40€)</option>
+                        <option value="Completa (50€)">Completa (50€)</option>
                     </select>
+                    <button class="suscripcionesButton">Ver Suscripciones</button>
                 </div>
-                <div class="radio">
-                    <input type="radio" name="descuento" value="si">
+                <div class="radio descuento">
+                    <input type="radio" name="descuento" value="Si">
                     <label for="si">Si</label>
-                    <input type="radio" name="descuento" value="no" checked>
+                    <input type="radio" name="descuento" value="No" checked>
                     <label for="no">No</label>
                 </div>
                 <div class="select horario">
                     <select name="horario">
-                        <option value="mañana">Mañana</option>
-                        <option value="tarde">Tarde</option>
+                        <option value="Mañana">Mañana</option>
+                        <option value="Tarde">Tarde</option>
                     </select>
                 </div>
             </div>
@@ -75,7 +75,7 @@
         <label for="observaciones">Observaciones</label>
         <textarea name="observaciones" rows="8" cols="50"
             placeholder="Cuéntanos algo que debamos tener en cuenta"></textarea>
-        <button disabled>Siguiente</button>
+        <button class="submit" disabled>Siguiente</button>
         </div>
     </form>
 

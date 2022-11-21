@@ -1,4 +1,17 @@
 $(document).ready(function () {
+    // Theme Change Logic
+
+    if (localStorage.getItem("theme") != null) {
+        var theme = localStorage.getItem("theme");
+        if (theme != "darkTheme") {
+            $("head #styles").attr("href", "../css/styles.css");
+            $("head #page").attr("href", "../css/formulario2.css");
+        } else {
+            $("head #styles").attr("href", "../css/styles_dark.css");
+            $("head #page").attr("href", "../css/formulario2_dark.css");
+        }
+    }
+
     // MemberBasket Class (Final Member Class)
 
     var member = JSON.parse(localStorage.getItem("socio"));
@@ -20,6 +33,35 @@ $(document).ready(function () {
             this.suscripcion = $("select[name=suscripcion]").val();
             this.descuento = $("input[name=descuento]:checked").val();
             this.horario = $("select[name=horario]").val();
+            this.diferenciaDescuento = 0;
+            this.cuota = this.calcularPrecio();
+        }
+
+        calcularPrecio() {
+            let precio = 0;
+            let suscripcion = $("select[name=suscripcion]").val();
+            switch (suscripcion) {
+                case "Basica (15€)":
+                    precio = 15;
+                    break;
+                case "Media (30€)":
+                    precio = 30;
+                    break;
+                case "Avanzada (40€)":
+                    precio = 40;
+                    break;
+                case "Completa (50€)":
+                    precio = 50;
+                    break;
+                default:
+                    console.log("Tipo de suscripción no válida");
+                    break;
+            }
+            if (this.descuento == "Si") {
+                this.diferenciaDescuento = precio * 0.30;
+                precio -= precio * 0.30;
+            }
+            return precio;
         }
     }
     // Regex patterns
@@ -69,11 +111,17 @@ $(document).ready(function () {
     });
 
     // LocalStorage Management onclick Button
-    $("button").click(function (e) {
+    $(".submit").click(function (e) {
         e.preventDefault();
         var socio = new MemberBasket();
         localStorage.setItem("member", JSON.stringify(socio));
         location.href = "./fichaSocio.html";
+    });
+
+    // Membership view button
+    $(".suscripcionesButton").click(function (e) {
+        e.preventDefault();
+        window.open("./suscripciones.html");
     });
 
 });

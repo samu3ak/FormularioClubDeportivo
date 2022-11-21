@@ -50,51 +50,14 @@ form .labels {
 }
 
 form .inputs {
+    margin-top: 10px;
     display: grid;
     grid-template-columns: 295px;
 }
 
-form .inputs input,
-.select select {
+form .inputs input {
     width: 250px;
     height: 30px;
-}
-
-button {
-    font-family: Agency FB;
-    font-size: 38px;
-    color: #ff8300;
-    background-color: #004060;
-    border: none;
-    padding: 15px;
-    width: 350px;
-    cursor: pointer;
-    margin-top: 50px;
-    margin-left: 390px;
-    transition: color 0.3s, background-color 0.3s;
-}
-
-button:hover {
-    background-color: #ff8300;
-    color: #004060;
-    transition: color 0.3s, background-color 0.3s;
-}
-
-button:disabled {
-    background-color: #cccccc;
-    color: #666666;
-    cursor: default;
-}
-
-form textarea {
-    margin-top: 50px;
-    margin-left: 80px;
-}
-
-label[for=observaciones] {
-    float: left;
-    margin-top: 60px;
-    margin-left: 270px;
 }
 
 .inputs .radio input {
@@ -104,20 +67,70 @@ label[for=observaciones] {
     margin: 0 auto;
 }
 
-input[name=anhos] {
+.inputs .radio label[for=si] {
+    padding-right: 50px;
+}
+
+form label[for=observaciones] {
+    margin-top: 30px;
+    display: none;
+}
+
+form textarea {
     margin-top: 20px;
+    display: none;
 }
 
-.suscripcion select {
-    width: 120px;
+.dniInput input[name=dni] {
+    width: 80px;
 }
 
-.suscripcion button {
-    margin: 0;
-    padding: 0;
-    height: 30px;
-    width: 120px;
-    font-size: 18px;
+.dniInput input[name=dniLetter] {
+    width: 20px;
+}
+
+.dniInput input[name=dniLetter]:disabled {
+    background-color: white;
+    color: black;
+}
+
+.dateInput input[name=fechaNmto] {
+    width: 150px;
+}
+
+.dateInput input[name=age] {
+    width: 60px;
+}
+
+.dateInput input[name=age]:disabled {
+    background-color: white;
+    color: black;
+}
+
+button {
+    font-family: Agency FB;
+    font-size: 38px;
+    color: white;
+    background-color: #111111;
+    border: none;
+    padding: 15px;
+    width: 350px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 140px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: white;
+    color: #111111;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: default;
 }
 
 /* Scroll Bar */
