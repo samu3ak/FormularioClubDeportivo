@@ -31,4 +31,14 @@ $(document).ready(function () {
             }
         }
     });
+
+    // Control Panel Button Logic in order to prevent non-member users to access
+    $(".controlButton").click(function (e) {
+        e.preventDefault();
+        if (localStorage.getItem("member") != null) {
+            location.href = "./html/panelControl.html";
+        } else {
+            
+        }
+    });
 });

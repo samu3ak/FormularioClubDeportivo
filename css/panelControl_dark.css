@@ -106,3 +106,21 @@
     color: #111111;
     transition: color 0.3s, background-color 0.3s;
 }
+
+.socio button,
+.socioBasket button {
+    font-family: Agency FB;
+    font-size: 18px;
+    color: #111111;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.socio button:hover,
+.socioBasket button:hover {
+    background-color: #111111;
+    color: white;
+    transition: color 0.3s, background-color 0.3s;
+}

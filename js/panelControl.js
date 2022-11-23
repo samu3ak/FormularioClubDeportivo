@@ -70,4 +70,6 @@ $(document).ready(function () {
         e.preventDefault();
         location.href = "./panelControl.html";
     });
+
+    // Hover border modifiable fields
 });
