@@ -37,6 +37,7 @@ $(document).ready(function () {
     var socio = JSON.parse(localStorage.getItem("member"));
 
     // Field data import and display
+    $("#avatar").attr("src", socio.avatar);
     $(".nombre span").html(socio.nombre);
     $(".apellidos span").html(socio.apellidos);
     $(".dni span").html(socio.dni);
@@ -69,6 +70,11 @@ $(document).ready(function () {
     $(".controlPanel").click(function (e) {
         e.preventDefault();
         location.href = "./panelControl.html";
+    });
+
+    $(".avatarButton").click(function (e) {
+        e.preventDefault();
+        location.href = "./avatares.html";
     });
 
     // When the user clicks the modify button, asks the user for the new data, if it's ok replace the data, else, warns the user that data

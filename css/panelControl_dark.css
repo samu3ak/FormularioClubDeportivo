@@ -108,7 +108,8 @@
 }
 
 .socio button,
-.socioBasket button {
+.socioBasket button,
+.avatarButton {
     font-family: Agency FB;
     font-size: 18px;
     color: #111111;
@@ -119,7 +120,8 @@
 }
 
 .socio button:hover,
-.socioBasket button:hover {
+.socioBasket button:hover,
+.avatarButton:hover {
     background-color: #111111;
     color: white;
     transition: color 0.3s, background-color 0.3s;
@@ -132,6 +134,9 @@
     margin-left: 60px;
 }
 
-#avatar:hover {
-    cursor: pointer;
+.avatarButton {
+    float: right;
+    margin-top: 100px;
+    margin-right: 80px;
+    height: 50px;
 }

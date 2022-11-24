@@ -12,14 +12,36 @@ $(document).ready(function () {
         }
     }
 
-    // Avatar Hover Border
-    $(".avatarList *").hover(function () {
-            // over
-            $(this).css("border", "2px solid yellow");
-            $(this).css("cursor", "pointer");
-        }, function () {
-            // out
-            $(this).css("border", "none");
-        }
-    );
+    // localStorage data recovery
+    var socio = JSON.parse(localStorage.getItem("member"));
+
+    // Button Click Link Redirect
+    $(".inicio").click(function (e) {
+        e.preventDefault();
+        location.href = "../index.html";
+    });
+
+    $(".cancelar").click(function (e) {
+        e.preventDefault();
+        location.href = "./panelControl.html";
+    });
+
+    // Avatar select logic
+    var selected;
+    $(".avatarList *").click(function (e) {
+        e.preventDefault();
+        selected = $(this);
+        $(".confirm").prop("disabled", false);
+        $(".avatarList *").css("border", "none");
+        $(this).css("border", "3px solid red");
+    });
+
+    // Confirm Button Click, when the user clicks it the src attribute of the member class changes
+    $(".confirm").click(function (e) {
+        e.preventDefault();
+        let href = $(selected).attr("src").toString();
+        socio.avatar = href;
+        localStorage.setItem("member", JSON.stringify(socio));
+        location.href = "./panelControl.html";
+    });
 });
