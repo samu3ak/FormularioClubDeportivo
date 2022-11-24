@@ -124,3 +124,14 @@
     color: white;
     transition: color 0.3s, background-color 0.3s;
 }
+
+#avatar {
+    height: 200px;
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+#avatar:hover {
+    cursor: pointer;
+}

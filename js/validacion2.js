@@ -35,6 +35,8 @@ $(document).ready(function () {
             this.horario = $("select[name=horario]").val();
             this.diferenciaDescuento = 0;
             this.cuota = this.calcularPrecio();
+
+            this.avatar = "";
         }
 
         calcularPrecio() {

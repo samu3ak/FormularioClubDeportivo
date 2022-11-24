@@ -10,7 +10,6 @@ $(document).ready(function () {
             $("head #page").attr("href", "./css/index_dark.css");
         }
     }
-
     // Dark Theme & Bright Theme Change Logic Function Button
     $(".controlPanel").click(function (e) {
         e.preventDefault();
@@ -37,8 +36,9 @@ $(document).ready(function () {
         e.preventDefault();
         if (localStorage.getItem("member") != null) {
             location.href = "./html/panelControl.html";
+            $(".alert").css("display", "none");
         } else {
-            
+            $(".alert").css("display", "inline");
         }
     });
 });

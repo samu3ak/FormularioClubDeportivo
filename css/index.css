@@ -60,6 +60,7 @@ button:hover {
     margin: 0px;
     margin-right: 260px;
     margin-top: 50px;
+    display: none;
 }
 
 /* Scroll Bar */
