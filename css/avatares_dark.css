@@ -1,0 +1,67 @@
+.content {
+    background: rgb(0, 0, 0, 0.6);
+    margin: 0 auto;
+    height: 550px;
+    width: 1600px;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.buttons {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+button {
+    width: 200px;
+}
+
+.buttons .cancelar {
+    float: right;
+}
+
+.buttons button,
+button {
+    font-family: Agency FB;
+    font-size: 38px;
+    color: white;
+    background-color: #111111;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+button:hover,
+.buttons button:hover {
+    background-color: white;
+    color: #111111;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.avatarList img {
+    height: 200px;
+    width: 200px;
+}
+
+.avatarList {
+    display: grid;
+    height: 500px;
+    width: 100%;
+    grid-template-columns: repeat(6, 14%);
+    justify-content: center;
+    gap: 50px;
+}
+
+.confirm {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.confirm:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
