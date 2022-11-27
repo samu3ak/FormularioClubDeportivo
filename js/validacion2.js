@@ -68,6 +68,8 @@ $(document).ready(function () {
     }
     // Regex patterns
     var numberRegex = /^\d*$/;
+    var ibanRegex = /^([A-Z]{2})([0-9]{22})$/;
+    var swiftRegex = /^([A-Z]{6})([A-Z0-9]{2})([A-Z0-9]{3})?$/;
 
     // Check input functions
     function checkInput(name, regex) {
@@ -100,10 +102,11 @@ $(document).ready(function () {
     // Check Form
     function checkForm(name) {
         $(name + " *").on("input", function () {
-            if (checkNumber("anhos", 80)) {
-                $("button").removeAttr("disabled");
+            if (checkNumber("anhos", 80) & checkInput("iban", ibanRegex) &
+                checkInput("swift", swiftRegex)) {
+                $(".submit").removeAttr("disabled");
             } else {
-                $("button").attr("disabled", "disabled");
+                $(".submit").attr("disabled", "disabled");
             }
         });
     }

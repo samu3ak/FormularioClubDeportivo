@@ -37,7 +37,9 @@ $(document).ready(function () {
     var socio = JSON.parse(localStorage.getItem("member"));
 
     // Field data import and display
-    $("#avatar").attr("src", socio.avatar);
+    if (socio.avatar != "") {
+        $("#avatar").attr("src", socio.avatar);
+    }
     $(".nombre span").html(socio.nombre);
     $(".apellidos span").html(socio.apellidos);
     $(".dni span").html(socio.dni);

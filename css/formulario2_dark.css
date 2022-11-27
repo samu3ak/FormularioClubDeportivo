@@ -60,6 +60,14 @@ form .inputs input,
     height: 30px;
 }
 
+.select{
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: auto;
+}
+
 button {
     font-family: Agency FB;
     font-size: 38px;
