@@ -45,6 +45,18 @@ footer {
     text-align: center;
 }
 
+button {
+    background-color: #111111;
+    color: white;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: white;
+    color: #111111;
+    transition: color 0.3s, background-color 0.3s;
+}
+
 footer .grid {
     display: grid;
     grid-template-columns: 10% 15% 60px 60px 60px;
@@ -61,4 +73,9 @@ footer p {
 footer img {
     height: 40px;
     width: 40px;
+}
+
+h1,
+p {
+    color: white;
 }

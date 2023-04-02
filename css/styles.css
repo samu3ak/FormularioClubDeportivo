@@ -52,6 +52,18 @@ footer .grid {
     justify-content: center;
 }
 
+button {
+    background-color: #004060;
+    color: #ff8300;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff8300;
+    color: #004060;
+    transition: color 0.3s, background-color 0.3s;
+}
+
 footer p {
     font-family: Agency FB;
     font-size: 24px;

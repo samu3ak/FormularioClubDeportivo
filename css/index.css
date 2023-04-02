@@ -17,21 +17,12 @@ article p {
 button {
     font-family: Agency FB;
     font-size: 38px;
-    color: #ff8300;
-    background-color: #004060;
     border: none;
     padding: 15px;
     width: 350px;
     margin-top: 30px;
     margin-left: 620px;
     cursor: pointer;
-    transition: color 0.3s, background-color 0.3s;
-}
-
-button:hover {
-    background-color: #ff8300;
-    transition: color 0.3s, background-color 0.3s;
-    color: #004060;
 }
 
 .suscripciones {
